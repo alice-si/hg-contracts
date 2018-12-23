@@ -1,7 +1,7 @@
 {
   "name": "@gnosis.pm/hg-contracts",
-  "version": "0.1.0",
-  "description": "Collection of smart contracts for the Gnosis prediction market platform",
+  "version": "2.0.1",
+  "description": "Collection of smart contracts for the Gnosis prediction market 2.0 platform",
   "scripts": {
     "setup-githooks": "git config core.hooksPath .githooks",
     "lint": "eslint .",
@@ -14,7 +14,7 @@
     "injectnetinfo": "tnt iN",
     "extractnetinfo": "tnt eN",
     "resetnetinfo": "truffle networks --clean && tnt iN",
-    "prepack": "eslint . && solhint contracts/**/*.sol && truffle compile && truffle networks --clean && tnt iN"
+    "prepack": "eslint . && truffle compile && truffle networks --clean && tnt iN"
   },
   "keywords": [
     "Ethereum",
