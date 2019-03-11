@@ -1,1 +1,8 @@
+# Not Code Files
 docs/
+
+# No Javascript
+contracts/**
+build/
+!build/**.js
+

@@ -1356,8 +1356,7 @@ contract(
       player2,
       player3,
       conditionId1,
-      conditionId2,
-      conditionId3;
+      conditionId2;
 
     before(async () => {
       predictionMarketSystem = await PredictionMarketSystem.deployed();
@@ -1408,12 +1407,6 @@ contract(
       conditionId2 = keccak256(
         oracle2 +
           [questionId2, outcomeSlotCount2]
-            .map(v => padLeft(toHex(v), 64).slice(2))
-            .join("")
-      );
-      conditionId3 = keccak256(
-        oracle3 +
-          [questionId3, outcomeSlotCount3]
             .map(v => padLeft(toHex(v), 64).slice(2))
             .join("")
       );
@@ -1675,8 +1668,7 @@ contract(
       player2,
       player3,
       conditionId1,
-      conditionId2,
-      conditionId3;
+      conditionId2;
 
     before(async () => {
       predictionMarketSystem = await PredictionMarketSystem.deployed();
@@ -1730,13 +1722,6 @@ contract(
             .map(v => padLeft(toHex(v), 64).slice(2))
             .join("")
       );
-      conditionId3 = keccak256(
-        oracle3 +
-          [questionId3, outcomeSlotCount3]
-            .map(v => padLeft(toHex(v), 64).slice(2))
-            .join("")
-      );
-
       await collateralToken.mint(player1, toBN(1e19), { from: minter });
       await collateralToken.approve(
         predictionMarketSystem.address,
