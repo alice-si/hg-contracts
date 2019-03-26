@@ -1,6 +1,6 @@
 {
   "name": "@gnosis.pm/hg-contracts",
-  "version": "2.0.1",
+  "version": "2.0.3",
   "description": "Collection of smart contracts for the Gnosis prediction market 2.0 platform",
   "scripts": {
     "setup-githooks": "git config core.hooksPath .githooks",
@@ -26,7 +26,7 @@
   "author": "Gnosis (https://gnosis.pm)",
   "license": "LGPL-3.0",
   "dependencies": {
-    "@gnosis.pm/util-contracts": "^2.0.0-alpha",
+    "dotenv": "^6.2.0",
     "erc-1155": "github:cag/erc-1155#sol-0.5",
     "openzeppelin-solidity": "github:elopio/openzeppelin-solidity#solc-nightly-2.0-update-2"
   },
@@ -39,6 +39,7 @@
     "npm-prepublish": "^1.2.3",
     "prettier": "1.15.2",
     "truffle": "^5.0.5",
+    "truffle-hdwallet-provider": "^1.0.5",
     "web3": "^1.0.0-beta.35"
   },
   "repository": {

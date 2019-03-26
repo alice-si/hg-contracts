@@ -1,3 +1,6 @@
+require("dotenv").config();
+const HDWalletProvider = require("truffle-hdwallet-provider");
+
 const config = {
   networks: {
     mainnet: {
@@ -16,8 +19,12 @@ const config = {
       network_id: "42"
     },
     rinkeby: {
-      host: "localhost",
-      port: 8545,
+      provider: function() {
+        return new HDWalletProvider(
+          process.env.SEED,
+          `https://rinkeby.infura.io/v3/22218302c99b4ee29f8a5876ad0b552c`
+        );
+      },
       network_id: "4"
     }
   },

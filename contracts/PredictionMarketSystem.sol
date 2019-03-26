@@ -178,10 +178,14 @@ contract PredictionMarketSystem is OracleConsumer, ERC1155 {
         return payoutNumerators[conditionId].length;
     }
 
-    function getCollectionId(bytes32 parentCollectionId, bytes32 conditionId, uint indexSet) private pure returns (bytes32) {
+    function getCollectionId(bytes32 parentCollectionId, bytes32 conditionId, uint indexSet) public pure returns (bytes32) {
         return bytes32(
             uint(parentCollectionId) +
             uint(keccak256(abi.encodePacked(conditionId, indexSet)))
         );
+    }
+
+    function getPositionId(IERC20 collateralToken, bytes32 collectionId) public pure returns (bytes32) {
+        return keccak256(abi.encodePacked(collateralToken, collectionId));
     }
 }

@@ -1,1 +1,10 @@
-{}
+{
+  "PredictionMarketSystem": {
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0xA3a193B42c48917c26988d2DD8a38C2652b7494F",
+      "transactionHash": "0x05062f2e7bdacf361fec481d4df5f0f37eefcffccfa41bfbfb10eb042fc8d964"
+    }
+  }
+}
